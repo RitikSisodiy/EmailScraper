@@ -16,7 +16,7 @@ def getAddress():
 	else:
 		url = "http://" + url
 		return url
-
+# function for parse address
 def parseAddress():
 	try:
 		website = urllib2.urlopen(getAddress())
@@ -30,7 +30,7 @@ def parseAddress():
 		print "Cannot retrieve URL: HTTP Error Code: ", err.code
 	except urllib2.URLError, err:
 		print "Cannot retrive URL: " + err.reason[1]
-
+# function for excution
 def execute():
 	parseAddress()
 
